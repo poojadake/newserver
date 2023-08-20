@@ -5,5 +5,7 @@
 - Install the node and npm --- sudo apt install nodejs npm
 - Clone this repo: git clone https://github.com/Sachintech-github/Learning-Ocean.git
 - Install the dependencies using --- npm install
-- start the node server with nodemon --- nodemon start
+- Install the nodemon --- npm install -g nodemon
+- npm install nodemon --save-dev
+- start the node server with nodemon --- nodemon start   OR npm start
 - Hit the public IP of the server on browser --- public_IP:4000
