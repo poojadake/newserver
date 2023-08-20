@@ -1,6 +1,6 @@
-.bg-3 { 
-      background-color: #ffffff;
-      color: #555555;
+.bg-3 {
+      background-color: #00BFFF;
+      color: #000000;
   }
   .container-fluid {
       padding-top: 70px;
@@ -12,13 +12,13 @@
       border: 0;
       border-radius: 0;
       margin-bottom: 0;
-      font-size: 12px;
+      font-size: 14px;
       letter-spacing: 5px;
   }
   .navbar-nav  li a:hover {
-      color: #1abc9c !important;
+      color: #FFCC0033 !important;
   }
 
   .active>a {
-    color: #1abc9c !important;;
+    color: #FF0022 !important;;
   }
