@@ -1,6 +1,7 @@
-# Build Simple Website with NodeJS, Express & EJS view engine
+# Build Simple Website with NodeJS.
 
-#document:
+
+#Steps:
 - Launch the AWS ec2 instance and update the os --- apt update && apt upgrade -y
 - Install the node and npm --- sudo apt install nodejs npm
 - Clone this repo: git clone https://github.com/Sachintech-github/Learning-Ocean.git
