@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        NODEJS_VERSION = '14' // Change this to the desired Node.js version
+        NODEJS_VERSION = '12' // Change this to the desired Node.js version
         APP_NAME = 'Learning-Ocean'
         AWS_ACCESS_KEY_ID = 'AKIAU2CGDU3WXKM7O5O3'
         AWS_SECRET_ACCESS_KEY = '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'
