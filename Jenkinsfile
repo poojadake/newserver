@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        NODEJS_VERSION = '12' // Change this to the desired Node.js version
+        NODEJS_VERSION = '14' // Change this to the desired Node.js version
         APP_NAME = 'Learning-Ocean'
         AWS_ACCESS_KEY_ID = credentials('c2378e26-9aff-47d9-a856-353293dc68e2')
         AWS_SECRET_ACCESS_KEY = credentials('ce16ff6e-54ee-4bdb-afad-bc7a48ad6089')
@@ -45,7 +45,8 @@ pipeline {
 
     post {
         always {
-            // Clean up: No need to terminate screen session as it's not used
+            // A simple echo statement to ensure there's at least one step in the always block
+            echo 'Pipeline completed.'
         }
     }
 }
