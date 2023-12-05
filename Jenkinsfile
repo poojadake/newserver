@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     def npmCommand = 'npm install'
-                    def APP_NAME = 'Learning-Ocean'
+                    def APP_NAME = '/home/ubuntu/Learning-Ocean'
                     sh "cd ${APP_NAME} && ${npmCommand}"
                 }
             }
