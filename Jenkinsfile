@@ -27,16 +27,6 @@ pipeline {
             }
         }
 
-        stage('Install Nodemon') {
-            steps {
-                script {
-                    dir(REPO_PATH) {
-                        sh 'npm install -g nodemon'
-                    }
-                }
-            }
-        }
-
         stage('Start Node Server') {
             steps {
                 script {
