@@ -20,7 +20,9 @@ pipeline {
             steps {
                 script {
                     def npmCommand = 'npm install'
-                    sh "cd ${REPO_PATH} && ${npmCommand}"
+                    dir(REPO_PATH) {
+                        sh npmCommand
+                    }
                 }
             }
         }
@@ -28,7 +30,9 @@ pipeline {
         stage('Install Nodemon') {
             steps {
                 script {
-                    sh 'npm install -g nodemon'
+                    dir(REPO_PATH) {
+                        sh 'npm install -g nodemon'
+                    }
                 }
             }
         }
@@ -36,8 +40,10 @@ pipeline {
         stage('Start Node Server') {
             steps {
                 script {
-                    def nodemonCommand = 'nodemon start'
-                    sh "cd ${REPO_PATH} && ${nodemonCommand}"
+                    dir(REPO_PATH) {
+                        def nodemonCommand = 'nodemon start'
+                        sh nodemonCommand
+                    }
                 }
             }
         }
