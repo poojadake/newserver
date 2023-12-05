@@ -19,6 +19,7 @@ pipeline {
             steps {
                 script {
                     def npmCommand = 'npm install'
+                    def APP_NAME = 'Learning-Ocean'
                     sh "cd ${APP_NAME} && ${npmCommand}"
                 }
             }
