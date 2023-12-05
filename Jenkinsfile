@@ -2,10 +2,11 @@ pipeline {
     agent any
 
     environment {
-        NODEJS_VERSION = '14' // Change this to the desired Node.js version
+        NODEJS_VERSION = '12' // Change this to the desired Node.js version
         APP_NAME = 'Learning-Ocean'
         AWS_ACCESS_KEY_ID = credentials('c2378e26-9aff-47d9-a856-353293dc68e2')
         AWS_SECRET_ACCESS_KEY = credentials('ce16ff6e-54ee-4bdb-afad-bc7a48ad6089')
+        REPO_PATH = "/var/lib/jenkins/workspace/nodejs-project/${APP_NAME}"
     }
 
     stages {
@@ -19,8 +20,7 @@ pipeline {
             steps {
                 script {
                     def npmCommand = 'npm install'
-                    def APP_NAME = '/home/ubuntu/Learning-Ocean'
-                    sh "cd ${APP_NAME} && ${npmCommand}"
+                    sh "cd ${REPO_PATH} && ${npmCommand}"
                 }
             }
         }
@@ -36,9 +36,8 @@ pipeline {
         stage('Start Node Server') {
             steps {
                 script {
-                    def screenSession = 'nodejs-app'
                     def nodemonCommand = 'nodemon start'
-                    sh "screen -dmS ${screenSession} bash -c 'cd ${APP_NAME} && ${nodemonCommand}'"
+                    sh "cd ${REPO_PATH} && ${nodemonCommand}"
                 }
             }
         }
@@ -46,10 +45,7 @@ pipeline {
 
     post {
         always {
-            // Clean up: Terminate the screen session when the build is done
-            script {
-                sh 'screen -XS nodejs-app quit'
-            }
+            // Clean up: No need to terminate screen session as it's not used
         }
     }
 }
