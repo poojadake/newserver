@@ -4,8 +4,8 @@ pipeline {
     environment {
         NODEJS_VERSION = '14' // Change this to the desired Node.js version
         APP_NAME = 'Learning-Ocean'
-        AWS_ACCESS_KEY_ID = credentials('c2378e26-9aff-47d9-a856-353293dc68e2')
-        AWS_SECRET_ACCESS_KEY = credentials('ce16ff6e-54ee-4bdb-afad-bc7a48ad6089')
+        AWS_ACCESS_KEY_ID = 'AKIAU2CGDU3WXKM7O5O3'
+        AWS_SECRET_ACCESS_KEY = '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'
         REPO_PATH = "/var/lib/jenkins/workspace/nodejs-project/${APP_NAME}"
     }
 
