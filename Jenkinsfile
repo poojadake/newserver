@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/poojadake/newserver.git'
+                git 'https://github.com/Sachintech-github/Learning-Ocean.git'
             }
         }
 
